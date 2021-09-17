@@ -21,7 +21,7 @@ You need to create an API token in the homeassistant Web interface.
 
 ## Examples:
 
-`
+```
 my $key = "<yoursecrettoken>";
 my $url = "http://homeassistant.local:8123";
 
@@ -34,10 +34,10 @@ my %data =  ( entity_id => "media_player.living_room",
 
 my $result = $api->services( "media_player", "play_media]",  %data );
 
-`
+```
 
 Validating Config:
-`
+```
 sub validate_config {
 
    print "Validating configuration:\n";
@@ -47,12 +47,10 @@ sub validate_config {
       print "Status: $result->{'result'} \n";;
    }
 }
-`
-
-
+```
 Set a state: 
 
-`
+```
   my $attributes = { brightness  => "100" ,
                      transition  => "5" };
 
@@ -60,5 +58,7 @@ Set a state:
                attributes => $attributes );
 
   my $res = $hass->set_state("light.office", %data);
-`
+```
+
+
 
