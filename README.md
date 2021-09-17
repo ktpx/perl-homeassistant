@@ -22,6 +22,9 @@ You need to create an API token in the homeassistant Web interface.
 ## Examples:
 
 ```
+
+use Hass::API;
+
 my $key = "<yoursecrettoken>";
 my $url = "http://homeassistant.local:8123";
 
@@ -59,6 +62,11 @@ Set a state:
 
   my $res = $hass->set_state("light.office", %data);
 ```
+## Installation
 
+Copy to your distributions perl site_perl folder, ie
 
+```
+ /usr/share/perl5/site_perl/Hass/API.pm
+```
 
