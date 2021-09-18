@@ -22,7 +22,7 @@ sub new {
     my $self = {
         ua  => $ua,
         apiKey => $apikey,
-        url -> $url
+        url => $url
     };
 
     bless $self, $class;
@@ -189,6 +189,11 @@ sub services {
    }
 
    return $result;
+}
+
+sub template {
+   my ($self,  $data) = @_;
+   return my $result = $self->post("/api/template", $data);   
 }
 
 1;
