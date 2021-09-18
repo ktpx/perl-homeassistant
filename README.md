@@ -69,7 +69,7 @@ Render Templates
 
 ```
 
-   my $res = $hass->template('" {{ states.light.office.state }}' ");
+   my $res = $hass->template('" {{ states.light.office.state }} "');
    print "$res\n";
 
 ```
