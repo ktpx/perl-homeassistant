@@ -1,7 +1,7 @@
 package Hass::API;
 #
 # Homeassistant Perl API Package 
-# Author: Jinxd
+# Author: ktpx
 #
 
 use strict;
