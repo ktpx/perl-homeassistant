@@ -16,6 +16,7 @@ API Documentation: https://developers.home-assistant.io/docs/api/rest/
  * ping 
  * get_history 
  * services 
+ * template
 
 You need to create an API token in the homeassistant Web interface.
 
@@ -61,7 +62,18 @@ Set a state:
                attributes => $attributes );
 
   my $res = $hass->set_state("light.office", %data);
+
 ```
+
+Render Templates
+
+```
+
+   my $res = $hass->template('" {{ states.light.office.state }}' ");
+   print "$res\n";
+
+```
+
 ## Installation
 
 Copy to your distributions perl site_perl folder, ie

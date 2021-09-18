@@ -192,8 +192,12 @@ sub services {
 }
 
 sub template {
-   my ($self,  $data) = @_;
-   return my $result = $self->post("/api/template", $data);   
+   my ($self,  $string) = @_;
+
+   my %data = ( template => $string );
+   my $json = encode_json(\%data);
+
+   return my $result = $self->post("/api/template", $json);   
 }
 
 1;
