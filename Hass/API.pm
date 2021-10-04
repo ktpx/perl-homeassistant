@@ -179,12 +179,11 @@ sub services {
 
    my $result;
 
-   if (not exists $data{'entity_id'}) {
+   if (not %data) {
       $result = $self->post("/api/services/$domain/$service");
    }
    else {
       my $json = encode_json(\%data);
-#      $domain = split(/./, $data{'entity_id'});
       $result = $self->post("/api/services/$domain/$service", $json);
    }
 
